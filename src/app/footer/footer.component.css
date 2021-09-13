@@ -1,0 +1,62 @@
+.topOnlineCourses{
+    /* border-right: 1px solid gray; */
+}
+.topOnlineCourses h5{
+    color:black;
+    /* text-decoration: underline; */
+
+}
+.CoursesList ul li{
+    color:black;
+    text-align: initial;
+}
+.contactDetails{
+    color:black;
+    /* text-decoration: underline; */
+}
+.f-left{
+    float:left;
+}
+h5{
+    border-bottom: 1px solid gray;
+    width:95%;
+}
+.addressList ul li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.footerArea{
+    background-color: #fff;
+}
+.containerOne{
+    margin-top: 20px;
+    padding-bottom: 50px;
+    text-align: initial;
+}
+
+/* ul li, .list-bullet li {
+    position: relative;
+    list-style-type: none; 
+    text-indent: -2em;
+}
+ul li:before {
+    content: '—  '; 
+}
+.list-bullet li:before {
+    content: '• '; 
+} */
+
+ul li{
+    list-style-type: square;
+}
+hr{
+    margin: 1px !important;
+}
+
+
+/*  */
+
+
+
+
+

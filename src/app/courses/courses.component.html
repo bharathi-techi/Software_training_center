@@ -1,0 +1,72 @@
+<div class="mainDiv">
+<hr>
+<!-- <img src="../../assets/bg1.jpg" /> -->
+<div class="bg_img">
+    
+</div>
+<div class="bg_text">
+    <h1 class="white">Streamlining Your Expertise To The Next Wave Of Technologies</h1>
+    <h5 class="white">Acquire Knowledge, Enhance Yourself & Attain Your Goal</h5>
+    <a href="../contact-us/contact-us.component.html" class="btn btn-primary">Enquire Now</a>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <form [formGroup]="techiForm">
+                <label>SELECT STUDY</label>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <select class="form-select" id="Technology" formControlName="technologyItems" (change)="changeTechnology()">
+                        <option *ngFor="let tech of technologyList" [ngValue]="tech.id">{{tech.course}}</option>
+                    </select> 
+                </div>
+                <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h3 class="panel-title"></h3>
+                        </div>
+                        <div class="panel-body">
+                          Panel content
+                        </div>
+                      </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div> -->
+            </form>
+        </div>
+<br>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="course-tab" data-bs-toggle="tab" href="#course" role="tab" aria-controls="course" aria-selected="true">Course</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="overview-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="false">Overview</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="syllabus-tab" data-bs-toggle="tab" href="#syllabus" role="tab" aria-controls="syllabus" aria-selected="false">Syllabus</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="experiance-tab" data-bs-toggle="tab" href="#employeeExperiance" role="tab" aria-controls="employeeExperiance" aria-selected="false">Experiance</a>
+            </li>
+        </ul>
+
+        <div class="tab-content " id="myTabContent" class="coursesMainDetails" *ngFor="let course of coursesData">
+            <div class="tab-pane fade show active cust-none mtb-15" id="course" role="tabpanel" aria-labelledby="course-tab">{{course.coursename}}</div>
+            <div class="tab-pane fade cust-none mtb-15" id="overview" role="tabpanel" aria-labelledby="overview-tab">{{course.courseoverview}}</div>
+            <div class="tab-pane fade cust-none syllabusDiv mtb-15" id="syllabus" role="tabpanel" 
+            aria-labelledby="syllabus-tab" >
+                <ul *ngFor="let list of course.syllabus" class="no-p">
+                    <li class="bg-gray"><h1>{{list.title}}</h1></li>
+                    <li><p><i class="fa fa-dot-circle-o fa-1x" aria-hidden="true"></i>&nbsp;{{list.subtitle}}</p></li>
+                </ul>
+            </div>
+            <div class="tab-pane fade cust-none mtb-15" id="employeeExperiance" role="tabpanel" 
+            aria-labelledby="experiance-tab" *ngFor="let exp of course.salary">
+                <h1>{{exp.experiance}}</h1>
+                <p>{{exp.salary}}</p>
+                <p>{{exp.company}}</p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
